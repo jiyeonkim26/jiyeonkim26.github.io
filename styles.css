@@ -52,10 +52,6 @@ ul {
   top: 0;
 }
 
-a.bold {
-    background-color: lightgoldenrodyellow;
-}
-
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
