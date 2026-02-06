@@ -29,6 +29,10 @@ li.menu#repository {
     background-color: forestgreen;
 }
 
+span{
+    color: rgb(67, 118, 67);
+}
+
 a.active {
     background-color: darkgreen;
 }
@@ -79,4 +83,10 @@ a.bold {
   .column {
     width: 100%;
   }
+}
+
+div.column{
+    outline-style: solid;
+    outline-width: 1pt;
+    outline-color: lightblue;
 }
