@@ -2,12 +2,16 @@ h1{
     text-align: center;
 }
 
-ul.menu {
+ul.menu{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color:  rgb(63, 152, 78);
+  background-color:  #3f984e;
   display: flex;
+}
+
+li.menu {
+text-align: center;
 }
 
 ul.menu li.menu a {
@@ -25,11 +29,11 @@ a.active {
     background-color: darkgreen;
 }
 
-body{
+body {
     background-color: lightblue;
 }
 
-th, td{
+th, td {
     padding: 15pt;
 }
 
@@ -40,6 +44,35 @@ ul {
   top: 0;
 }
 
-a.bold{
+a.bold {
     background-color: lightgoldenrodyellow;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
