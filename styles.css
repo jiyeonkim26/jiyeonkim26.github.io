@@ -1,24 +1,30 @@
 h1{
     text-align: center;
 }
-ul.menu{
-    background-color: rgb(63, 152, 78);
-    list-style-type: none;
-    display: block;
-    overflow: hidden; 
+
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:  rgb(63, 152, 78);
+  display: flex;
 }
-li.menu{
-    float: left;
-    margin: 0;
-    padding: 10;
-    display: block;
+
+ul.menu li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-li.menu#selected:hover{
-    background-color: rgb(109, 215, 85);
+
+ul li a:hover {
+  background-color: rgb(109, 215, 85);
 }
-li#selected {
-    background-color: rgb(63, 152, 78);
+
+a.active {
+    background-color: darkgreen;
 }
+
 body{
     background-color: lightblue;
 }
@@ -29,4 +35,7 @@ tr:hover {background-color: #D6EEEE;}
 ul {
   position: sticky;
   top: 0;
+}
+a.bold{
+    background-color: lightgoldenrodyellow;
 }
