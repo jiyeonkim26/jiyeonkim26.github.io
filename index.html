@@ -9,6 +9,7 @@
   <meta property="og:title"         content="Jiyeon Kim's Website" />
   <meta property="og:description"   content="This is an example I did in class for CS40" />
   <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+  <meta name="document"             content="jiyeon's website for CS40 with some song recs" />
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYMJXW5H5Q"></script>
@@ -19,31 +20,7 @@
 
   gtag('config', 'G-YYMJXW5H5Q');
 </script>
-
-  <!-- style tag always inside the head tag -->
-<style>
-  h1{
-    text-align:center
-  }
-  ul.menu{
-    background-color: rgb(63, 152, 78);
-    list-style-type: none;
-    display: block;
-    overflow: hidden; 
-  }
-  li.menu{
-    float: left;
-    margin: 0;
-    padding: 10;
-    display: block;
-  }
-  li.menu#selected:hover {
-    background-color: rgb(109, 215, 85);
-  }
-  li#selected {
-    background-color: rgb(63, 152, 78);
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 
@@ -59,10 +36,10 @@
    <h1 style="color: green; font-size: 3rem;">Jiyeon's World</h1>
    <div>
    <ul class="menu"> <!-- ol = ordered list = numbered list AND ul = unordered list = bullet points -->
-    <a href="index.html"><li class="menu" id="selected">Home</li></a>
-    <a href="about.html"><li class="menu" id="selected">About</li></a>
-    <a href="projects.html"><li class="menu" id="selected">Projects</li></a>
-    <a href="https://github.com/jiyeonkim26/jiyeonkim26.github.io.git"><li class="menu" id="selected">GitHub</li></a>
+    <li class="menu" id="selected"><a href="index.html"></a>Home</li>
+    <li class="menu" id="selected"><a href="about.html"></a>About</li>
+    <li class="menu" id="selected"><a href="projects.html"></a>Projects</li>
+    <li class="menu" id="selected"><a href="https://github.com/jiyeonkim26/jiyeonkim26.github.io.git"></a>GitHub</li>
    </ul>
    </div>
   
@@ -109,10 +86,10 @@
   </div>
       <!-- all visible "stuff" on the page inside body tag -->
 <p>
-  <a href="https://github.com/mikeizbicki/cmc-csci040" rel="follow">follow</a>
+  <a href="https://github.com/mikeizbicki/cmc-csci040" rel="follow">follow</a> the CS40 course GitHub page
 </p>
 <p>
-  <a href="https://izbicki.me/" rel="nofollow">follow</a>
+  <a href="https://izbicki.me/" rel="nofollow">follow</a> Mike Izbicki's personal webpage ... he's a pretty cool CMC prof
 </p>
 
 <p>
@@ -121,6 +98,25 @@
       is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> Creative Commons CC BY-NC-ND 4.0</a>
         <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
       </p>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
 
 </body>
 </html>
