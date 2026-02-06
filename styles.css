@@ -37,6 +37,10 @@ a.active {
     background-color: darkgreen;
 }
 
+a {
+    color: palegoldenrod;
+}
+
 body {
     background-color: lightblue;
 }
