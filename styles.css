@@ -25,6 +25,10 @@ ul li.menu a:hover {
   background-color: rgb(109, 215, 85);
 }
 
+li.menu#repository {
+    background-color: forestgreen;
+}
+
 a.active {
     background-color: darkgreen;
 }
