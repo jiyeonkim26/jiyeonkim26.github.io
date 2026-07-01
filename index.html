@@ -1,129 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> <!-- the head tag is for non-visible information -->
-    <title>Jiyeon's Website</title>
+  <title>Jiyeon's Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jiyeon Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
   <meta property="og:url" content="https://jiyeonkim26.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jiyeon Kim's Website">
-  <meta property="og:description" content="This is an example I did in class for CS40">
+  <meta property="og:description" content="A website to display my past projects and provide my background">
   <meta property="og:image" content="https://www.your-domain.com/path/image.jpg">
-  <meta name="document" content="jiyeon's website for CS40 with some song recs">
+  <meta name="document" content="Jiyeon's website and past projects">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYMJXW5H5Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYMJXW5H5Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-YYMJXW5H5Q');
-</script>
-<link rel="stylesheet" href="styles.css">
+    gtag('config', 'G-YYMJXW5H5Q');
+  </script>
 </head>
-
-
 <body>
-  <!-- all visible "stuff" on the page inside body tag -->
 
- <h1>
-  <b>hello</b> <i>world</i> ! <b>hola</b> <i>mundo</i> ! <b>안녕</b> <i>세계</i> ! 
-  <b>hello</b> <i>world</i> ! <b>hola</b> <i>mundo</i> ! <b>안녕</b> <i>세계</i> ! 
-  <b>hello</b> <i>world</i> ! <b>hola</b> <i>mundo</i> !
- </h1>
+<div class="layout">
 
+  <!-- ============ Sticky sidebar (desktop) / top bar (mobile) ============ -->
+  <aside class="sidebar">
+    <img class="avatar" src="https://placehold.co/128x128/DEDACC/262420?text=Photo" alt="Your headshot">
+    <div>
+      <h1>Your Name</h1>
+      <p class="role">PhD Student, Your Field · Your University</p>
+    </div>
+    <nav class="contact-links">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+    </nav>
+    <p class="location">City, Country</p>
+  </aside>
 
-  <!-- GOAL: create a navigation menu bar-->
-   <h1 style="color: green; font-size: 3rem;">Jiyeon's World</h1>
-   <div>
-    <ul class="menu"> <!-- ol = ordered list = numbered list AND ul = unordered list = bullet points -->
-      <li class="menu"><a href="index.html" class="active">Home</a></li>
-      <li class="menu"><a href="about.html">About</a></li>
-      <li class="menu"><a href="projects.html">Projects</a></li>
-      <li class="menu" id="repository"><a href="https://github.com/jiyeonkim26/jiyeonkim26.github.io.git">GitHub</a></li>
-    </ul>
-   </div>
-  
+  <!-- ============ Main content ============ -->
+  <main class="content">
 
-<div style="background-color: #d4a5a5; padding: 20px; border: 1px solid #ccc;">
-<h2>Jiyeon's favorite songs at the moment:</h2>
-      <ul>
-        <li><a class="bold" href="https://open.spotify.com/track/6tHVEMyRfxGgQuXRzl2yOF?si=aa81d80d7b264de6">
-          "I've Seen It"</a> by Olivia Dean</li>
-        <li><a class="bold" href="https://open.spotify.com/track/1M8U7UHu9rhwumTu8IrqeD?si=87978e9693df4976">
-          "Praising You"</a> by Rita Ora (feat. Fatboy Slim)</li>
-        <li><a class="bold" href="https://open.spotify.com/track/4wajJ1o7jWIg62YqpkHC7S?si=8b51cec7535c41e4">
-          "Weird Fishes / Arpeggi"</a> by Radiohead</li>
+    <h1 class="headline">Who <span class="cycle" id="cycleWord"></span><span class="caret" id="caret">|</span> the future?</h1>
+
+    <div class="intro">
+      <p>
+        I am a PhD student in <strong>Your Field</strong> at <strong>Your University</strong>,
+        advised by Professor(s) <a href="#">Advisor Name</a>. I use [your methods] to study,
+        build, and scale [your subject], and I <a href="#work">direct/lead</a> [a project, lab,
+        or initiative you're part of].
+      </p>
+      <p>
+        Outside research, I'm <a href="#writing">writing</a> about [topic], thinking about
+        [interest], and working with <a href="#" target="_blank" rel="noopener">Organization</a>,
+        where I serve as [role].
+      </p>
+    </div>
+
+    <!-- mobile-only contact block, mirrors the sticky sidebar for small screens -->
+    <div class="mobile-contacts">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+
+    <section id="work">
+      <h2>vita contemplativa</h2>
+      <p>
+        A short paragraph on the philosophy or throughline behind your research or practice —
+        what question you keep returning to, and why it matters.
+      </p>
+    </section>
+
+    <section id="practice">
+      <h2>vita activa</h2>
+      <p>
+        A short paragraph on what you actually build or do — projects, tools, systems, or
+        interventions that come out of the thinking above.
+      </p>
+    </section>
+
+    <section id="writing">
+      <h2>recent writing &amp; talks</h2>
+      <ul class="writings">
+        <li>
+          <a href="#" target="_blank" rel="noopener">Title of an article or talk</a>
+          <div class="venue">Publication or Venue Name</div>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">Another piece of writing</a>
+          <div class="venue">Publication or Venue Name (Award, if any)</div>
+        </li>
       </ul>
+    </section>
+
+  </main>
 </div>
 
-<div style="background-color: #d49393; padding: 20px; border: 1px solid #ccc; text-align: center;">
-<img src="https://images.genius.com/51a46ef360cb8f6132064f990c9ebbf2.1000x1000x1.png"
-        alt="The Art of Loving Album Cover"
-          width="100"
-          height="100"
-          title="The Art of Loving Album Cover">
-<img src="https://edmreviewer.com/wp-content/uploads/2023/04/Rita-Ora-Praising-You-feat.-Fatboy-Slim.jpg"
-        alt="Praising You Album Cover"
-          width="100"
-          height="100"
-          title="Praising You Album Cover">
-<img src="https://i.scdn.co/image/ab67616d0000b27334733f87148c2fbe0176abdb"
-        alt="Weird Fishes Album Cover"
-          width="100"
-          height="100"
-          title="Weird Fishes Album Cover">
+<!-- Ginkgo leaf cursor follower (fan shape, light-green-to-gold gradient, stem tip = pointer tip) -->
+<div id="pencil-cursor" aria-hidden="true">
+  <svg width="34" height="39" viewBox="0 0 130 150">
+    <defs>
+      <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--leaf-green)"/>
+        <stop offset="100%" stop-color="var(--leaf-gold)"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#leafGrad)" stroke="var(--leaf-stroke)" stroke-width="1.2" stroke-linejoin="round" d="M 11.82 30.98 C 11.97 30.58 12.42 29.36 12.75 28.55 C 13.07 27.73 13.40 26.91 13.77 26.10 C 14.14 25.28 14.52 24.46 14.95 23.65 C 15.39 22.84 15.85 22.03 16.37 21.25 C 16.89 20.46 17.45 19.68 18.07 18.93 C 18.70 18.17 19.37 17.44 20.11 16.74 C 20.84 16.04 21.63 15.37 22.47 14.74 C 23.32 14.11 24.22 13.51 25.16 12.96 C 26.10 12.40 27.09 11.89 28.11 11.42 C 29.13 10.94 30.19 10.51 31.27 10.11 C 32.34 9.72 33.45 9.36 34.56 9.03 C 35.67 8.70 36.80 8.41 37.93 8.13 C 39.05 7.85 40.19 7.61 41.31 7.36 C 42.44 7.12 43.57 6.90 44.69 6.68 C 45.80 6.45 46.92 6.24 48.03 6.03 C 49.14 5.81 50.25 5.60 51.36 5.38 C 52.47 5.17 53.58 4.95 54.69 4.73 C 55.81 4.52 56.91 4.09 58.06 4.09 C 59.22 4.10 60.44 4.52 61.60 4.76 C 62.76 4.99 63.86 5.66 65.00 5.52 C 66.14 5.38 67.27 4.41 68.47 3.92 C 69.67 3.42 70.97 2.74 72.20 2.53 C 73.43 2.32 74.63 2.58 75.83 2.67 C 77.04 2.77 78.24 2.91 79.42 3.11 C 80.60 3.31 81.77 3.56 82.91 3.86 C 84.05 4.16 85.17 4.51 86.26 4.90 C 87.34 5.29 88.40 5.73 89.42 6.20 C 90.44 6.67 91.43 7.18 92.39 7.70 C 93.35 8.22 94.27 8.78 95.17 9.35 C 96.07 9.91 96.94 10.49 97.80 11.08 C 98.66 11.66 99.49 12.26 100.32 12.85 C 101.15 13.44 101.96 14.03 102.78 14.62 C 103.59 15.21 104.40 15.80 105.21 16.38 C 106.02 16.97 106.84 17.56 107.65 18.15 C 108.47 18.74 109.29 19.33 110.10 19.94 C 110.92 20.54 111.74 21.15 112.54 21.78 C 113.34 22.41 114.14 23.05 114.90 23.71 C 115.67 24.38 116.42 25.06 117.13 25.77 C 117.83 26.47 118.51 27.20 119.13 27.96 C 119.74 28.71 120.54 29.90 120.82 30.29 C 116.82 52.29 79.00 71.00 65.00 85.00 L 69.50 87.00 C 68.50 107.00 63.00 113.00 58.00 145.00 C 62.00 117.00 59.50 109.00 60.50 87.00 C 48.50 73.00 15.82 52.98 11.82 30.98 Z"/>
+  </svg>
 </div>
 
-<div style="background-color: #af7474; padding: 20px; border: 1px solid #ccc;">
-  <h2>Favorite study spots in Claremont:</h2>
-<table>
-  <tr>
-    <th>Rank</th>
-    <th>Name</th>
-    <th>Notes</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Honnold Mudd</td>
-    <td>Love the smell of books</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Coffee Bean & Tea Leaf</td>
-    <td>Sticky cafe grindset mode</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Marston Quad</td>
-    <td>Peak photosynthesizing spot</td>
-  </tr>
-</table>
-</div>
+<script>
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-<div class="row">
-  <div class="column" style="background-color:#aba;">
-  <h3><span style="background-color: #abd;">Webpage Links</span></h3>
-  <p>Home: <a href="https://jiyeonkim26.github.io" rel="follow">Jiyeon Kim</a></p>
-  <p>GitHub: <a href="https://github.com/jiyeonkim26/jiyeonkim26.github.io.git">Repository</a></p>
-  </div>
-  <div class="column" style="background-color:#abb;">
-  <h3><span style="background-color: #abd;">Course & Instructor Links</span></h3>
-  <p>CMC CS40: <a href="https://github.com/mikeizbicki/cmc-csci040/tree/2026spring" rel="follow">CS40 course page</a></p>
-  <p>Instructor: <a href="https://izbicki.me/" rel="follow">Mike Izbicki</a></p>
-  </div>
-  <div class="column" style="background-color:#abc;">
-  <h3><span style="background-color: #abd;">Classmate Projects</span></h3>
-  <p>Chisato's webpage: <a href="https://chisatokamakura.github.io" rel="follow">Olympic Figure Skaters</a></p>
-  <p>Preslie's webpage: <a href="https://preslielampitt.github.io/" rel="follow">Visiting the Greek Islands</a></p>
-  </div>
-  <div class="column" style="background-color:#abd;">
-  <h3><span style="background-color: #abd;">Socials & Misc.</span></h3>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/jiyeonkim1">Jiyeon Kim</a></p>
-  <p>Copyright: Licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a></p>
-  </div>
-</div>
+  /* ---------------- Headline typewriter (type, pause, delete, repeat) ---------------- */
+  (function typewriter() {
+    const words = ["shapes", "studies", "redesigns", "imagines"]; // swap in your own
+    const el = document.getElementById('cycleWord');
+    const caret = document.getElementById('caret');
+    const TYPE_MS = 75;
+    const DELETE_MS = 45;
+    const HOLD_MS = 1300;
+
+    if (prefersReduced) {
+      el.textContent = words[0];
+      caret.style.animation = 'none';
+      return;
+    }
+
+    let wordIndex = 0;
+
+    function type(word, i, done) {
+      el.textContent = word.slice(0, i);
+      if (i < word.length) {
+        setTimeout(() => type(word, i + 1, done), TYPE_MS);
+      } else {
+        done();
+      }
+    }
+
+    function erase(word, i, done) {
+      el.textContent = word.slice(0, i);
+      if (i > 0) {
+        setTimeout(() => erase(word, i - 1, done), DELETE_MS);
+      } else {
+        done();
+      }
+    }
+
+    function cycle() {
+      const word = words[wordIndex];
+      type(word, 0, () => {
+        setTimeout(() => {
+          erase(word, word.length, () => {
+            wordIndex = (wordIndex + 1) % words.length;
+            cycle();
+          });
+        }, HOLD_MS);
+      });
+    }
+
+    cycle();
+  })();
+
+  /* ---------------- Leaf cursor (gradient leaf, stem tip = pointer hotspot) ---------------- */
+  (function leafCursor() {
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (!hasFinePointer || prefersReduced) return; // skip on touch devices / reduced motion
+
+    document.body.classList.add('cursor-active');
+    const leaf = document.getElementById('pencil-cursor');
+
+    // Stem tip sits at (58, 145) in the 130x150 viewBox; convert to the rendered
+    // 34x39 px box so we know exactly where the "hotspot" is within the element.
+    const TIP_X = 58 * (34 / 130);
+    const TIP_Y = 145 * (39 / 150);
+
+    let mouseX = -100, mouseY = -100;
+    let curX = -100, curY = -100;
+    let lastX = -100, lastY = -100;
+    let angle = -15; // resting tilt, in degrees
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function loop() {
+      // slight easing gives the leaf a drifting, trailing feel rather than snapping
+      curX += (mouseX - curX) * 0.3;
+      curY += (mouseY - curY) * 0.3;
+
+      const dx = mouseX - lastX;
+      const dy = mouseY - lastY;
+      if (Math.hypot(dx, dy) > 3) {
+        const target = Math.atan2(dy, dx) * (180 / Math.PI) * 0.3;
+        angle += (target - angle) * 0.2;
+        lastX = mouseX;
+        lastY = mouseY;
+      }
+
+      // Rotate the tip's local offset by the current angle, then translate so that
+      // rotated point lands exactly on the pointer — the tip stays pinned under the
+      // cursor no matter how the leaf is tilted (transform-origin is 0 0, top-left).
+      const rad = angle * (Math.PI / 180);
+      const rx = TIP_X * Math.cos(rad) - TIP_Y * Math.sin(rad);
+      const ry = TIP_X * Math.sin(rad) + TIP_Y * Math.cos(rad);
+
+      leaf.style.transform = `translate(${curX - rx}px, ${curY - ry}px) rotate(${angle}deg)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+  })();
+
+  /* ---------------- Click leaf burst (small ginkgo leaves scatter on click) ---------------- */
+  (function clickLeaves() {
+    if (prefersReduced) return;
+
+    const LEAF_PATH = 'M 11.82 30.98 C 11.97 30.58 12.42 29.36 12.75 28.55 C 13.07 27.73 13.40 26.91 13.77 26.10 C 14.14 25.28 14.52 24.46 14.95 23.65 C 15.39 22.84 15.85 22.03 16.37 21.25 C 16.89 20.46 17.45 19.68 18.07 18.93 C 18.70 18.17 19.37 17.44 20.11 16.74 C 20.84 16.04 21.63 15.37 22.47 14.74 C 23.32 14.11 24.22 13.51 25.16 12.96 C 26.10 12.40 27.09 11.89 28.11 11.42 C 29.13 10.94 30.19 10.51 31.27 10.11 C 32.34 9.72 33.45 9.36 34.56 9.03 C 35.67 8.70 36.80 8.41 37.93 8.13 C 39.05 7.85 40.19 7.61 41.31 7.36 C 42.44 7.12 43.57 6.90 44.69 6.68 C 45.80 6.45 46.92 6.24 48.03 6.03 C 49.14 5.81 50.25 5.60 51.36 5.38 C 52.47 5.17 53.58 4.95 54.69 4.73 C 55.81 4.52 56.91 4.09 58.06 4.09 C 59.22 4.10 60.44 4.52 61.60 4.76 C 62.76 4.99 63.86 5.66 65.00 5.52 C 66.14 5.38 67.27 4.41 68.47 3.92 C 69.67 3.42 70.97 2.74 72.20 2.53 C 73.43 2.32 74.63 2.58 75.83 2.67 C 77.04 2.77 78.24 2.91 79.42 3.11 C 80.60 3.31 81.77 3.56 82.91 3.86 C 84.05 4.16 85.17 4.51 86.26 4.90 C 87.34 5.29 88.40 5.73 89.42 6.20 C 90.44 6.67 91.43 7.18 92.39 7.70 C 93.35 8.22 94.27 8.78 95.17 9.35 C 96.07 9.91 96.94 10.49 97.80 11.08 C 98.66 11.66 99.49 12.26 100.32 12.85 C 101.15 13.44 101.96 14.03 102.78 14.62 C 103.59 15.21 104.40 15.80 105.21 16.38 C 106.02 16.97 106.84 17.56 107.65 18.15 C 108.47 18.74 109.29 19.33 110.10 19.94 C 110.92 20.54 111.74 21.15 112.54 21.78 C 113.34 22.41 114.14 23.05 114.90 23.71 C 115.67 24.38 116.42 25.06 117.13 25.77 C 117.83 26.47 118.51 27.20 119.13 27.96 C 119.74 28.71 120.54 29.90 120.82 30.29 C 116.82 52.29 79.00 71.00 65.00 85.00 L 69.50 87.00 C 68.50 107.00 63.00 113.00 58.00 145.00 C 62.00 117.00 59.50 109.00 60.50 87.00 C 48.50 73.00 15.82 52.98 11.82 30.98 Z';
+    const LEAF_COLORS = ['var(--leaf-green)', 'var(--leaf-gold)', 'var(--leaf-gold-dark)'];
+
+    document.addEventListener('click', (e) => {
+      const count = 6;
+      for (let i = 0; i < count; i++) {
+        const leaf = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        leaf.setAttribute('viewBox', '0 0 130 150');
+        leaf.classList.add('click-star');
+        const color = LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)];
+        leaf.innerHTML = `<path d="${LEAF_PATH}" fill="${color}" stroke="var(--leaf-stroke)" stroke-width="2.5"/>`;
+
+        const angle = Math.random() * Math.PI * 2;
+        const dist = 28 + Math.random() * 38;
+        leaf.style.left = e.clientX + 'px';
+        leaf.style.top = e.clientY + 'px';
+        leaf.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+        leaf.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+        leaf.style.setProperty('--r', Math.floor(Math.random() * 360) + 'deg');
+
+        document.body.appendChild(leaf);
+        leaf.addEventListener('animationend', () => leaf.remove());
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
