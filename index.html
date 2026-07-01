@@ -264,7 +264,7 @@
         leaf.style.height = (size * (150 / 130)) + 'px'; // keep the leaf's proportions correct
 
         const angle = Math.random() * Math.PI * 2;
-        const dist = 25 + Math.random() * 95;
+        const dist = 45 + Math.random() * 125;
         leaf.style.left = e.clientX + 'px';
         leaf.style.top = e.clientY + 'px';
         leaf.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
