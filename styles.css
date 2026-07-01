@@ -53,8 +53,8 @@
   }
 
   .avatar {
-    width: 128px;
-    height: 128px;
+    width: 200px;
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
     background: var(--hairline);
