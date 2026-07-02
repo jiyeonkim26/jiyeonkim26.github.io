@@ -178,11 +178,12 @@ section p { margin: 0 0 14px; color: var(--ink); }
   margin: 0;
 }
 .writings li {
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px dashed var(--hairline);
+  font-size: 0.88rem;
 }
 .writings li:last-child { border-bottom: none; }
-.writings .venue { color: var(--muted); font-size: 0.88rem; }
+.writings .venue { color: var(--muted); font-size: 0.78rem; }
 
 /* ---------- Custom leaf cursor ---------- */
 body.cursor-active,
