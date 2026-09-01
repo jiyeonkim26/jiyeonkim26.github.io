@@ -64,7 +64,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 .avatar {
   width: 200px;
-  height: 230px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -81,6 +81,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   font-size: 0.95rem;
   margin: 0;
 }
+
 .audio-links {
   background: none;
   gap: 8px;
