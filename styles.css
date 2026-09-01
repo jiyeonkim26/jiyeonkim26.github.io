@@ -64,7 +64,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 .avatar {
   width: 200px;
-  height: 300px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
 }
